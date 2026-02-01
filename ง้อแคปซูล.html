@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ถึงแคปซูลคนสวย</title>
+
+<style>
+body {
+  background: linear-gradient(#ffe6ee, #ffd6e5);
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  margin: auto;
+  min-height: 500px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 24px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.btn-area {
+  margin-top: 30px;
+  position: relative;
+  height: 200px;
+}
+
+button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.2s;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+#noBtn {
+  background: #ccc;
+  color: #333;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>ถึงแคปซูลคนสวย ❤️</h1>
+
+<p>
+เค้าขอโทษจริงๆสำหรับทุกอย่างที่เค้าทำพลาดไป  
+เค้ารู้บี๋เสียใจเค้าก็เสียใจที่ทำแบบนั้นไป เค้ารักบี๋มากๆนะ
+</p>
+
+<p>
+บี๋จะให้โอกาสเค้าอีกครั้งมั้ย🥺
+</p>
+
+<div class="btn-area">
+
+<button id="yesBtn" onclick="yesClick()">
+ให้โอกาสเค้า💗
+</button>
+
+<button id="noBtn" onclick="moveBtn()" ontouchstart="moveBtn()">
+ไม่ให้โอกาส😤
+</button>
+
+</div>
+
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const area = document.querySelector(".btn-area");
+
+function moveBtn() {
+
+  const maxX = area.clientWidth - noBtn.offsetWidth;
+  const maxY = area.clientHeight - noBtn.offsetHeight;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+function yesClick() {
+
+    const music = document.getElementById("bgm");
+  music.play();
+
+  alert("เย่่่่่ 💖 ขอบคุณที่ให้โอกาสเค้านะ\nเค้าจะดูแลบีบี๋ให้ดีที่สุดเลย");
+}
+</script>
+
+<audio id="bgm" loop>
+  <source src="H.E.R. - Best Part (Lyrics) Ft. Daniel Caesar" type="audio/mpeg">
+</audio>
+
+
+</body>
+</html>
